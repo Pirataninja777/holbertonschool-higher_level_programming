@@ -6,10 +6,7 @@ def delete_at(my_list=[], idx=0):
         # Si el índice no es válido,
         # devolver la lista sin cambios
         return my_list
-
-    # Si el índice es válido, eliminar
-    # el elemento en la posición idx
-    # Utilizamos el operador de "rebanado"
-    # para crear una nueva lista
-    # excluyendo el elemento en la posición idx.
-    return my_list[:idx] + my_list[idx + 1:]
+# Usar del para eliminar el elemento en la posición idx
+    del my_list[idx]
+    # Retornar la lista modificada
+    return my_list
