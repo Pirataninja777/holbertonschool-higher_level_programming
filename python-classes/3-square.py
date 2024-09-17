@@ -1,12 +1,8 @@
 #!/usr/bin/python3
-# Define a square with size validation and area computation.
+"""Define una clase Square con validación de tamaño y cálculo del área."""
 
 class Square:
-    """Representa un cuadrado.
-
-    Attributes:
-        __size (int): El tamaño del cuadrado.
-    """
+    """Clase que define un cuadrado con un tamaño validado y un método para calcular el área."""
 
     def __init__(self, size=0):
         """Inicializa una nueva instancia de Square.
@@ -32,4 +28,3 @@ class Square:
             int: El área del cuadrado.
         """
         return self.__size ** 2
-
