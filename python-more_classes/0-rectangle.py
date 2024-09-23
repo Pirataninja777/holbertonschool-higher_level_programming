@@ -6,4 +6,3 @@ class Rectangle:
     """Creating a class"""
 
     pass
-
