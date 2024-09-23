@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Este modulo define width y height de un rectangulo"""
+
+
 class Rectangle:
     """A class that defines a rectangle by its width and height."""
 
