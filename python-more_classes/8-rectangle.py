@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Write a class Rectangle that defines a rectangle """
+
+
 class Rectangle:
     """Defines a rectangle class."""
 
