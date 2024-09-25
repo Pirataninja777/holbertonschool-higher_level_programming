@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""class rectangle based on 8.py"""
+
+
 class Rectangle:
     """Defines a rectangle class."""
 
