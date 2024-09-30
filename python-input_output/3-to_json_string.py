@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import json
+"""JavaScript Object Notation"""
 
 
 def to_json_string(my_obj):
