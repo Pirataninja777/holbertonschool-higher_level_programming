@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Triangulo Pascal"""
 
+
 def pascal_triangle(n):
     """
     Generate Pascal's triangle of size n.
