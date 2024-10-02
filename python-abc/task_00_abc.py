@@ -17,10 +17,10 @@ class Animal(ABC):
 class Dog(Animal):
     """sub clase Perro"""
     def sound(self):
-        return "bark"
+        return "Bark"
 
 
 class Cat(Animal):
     """subclase Gato"""
     def sound(self):
-        return "meow"
+        return "Meow"
