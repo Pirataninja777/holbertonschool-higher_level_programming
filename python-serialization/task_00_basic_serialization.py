@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import json
+"""basic serialization module"""
+
 
 def serialize_and_save_to_file(data, filename):
     """
@@ -7,7 +9,8 @@ def serialize_and_save_to_file(data, filename):
 
     Parámetros:
         data (dict): Un diccionario de Python con los datos a serializar.
-        filename (str): El nombre del archivo de salida JSON. Si el archivo ya existe, será reemplazado.
+        filename (str): El nombre del archivo de salida JSON. Si el
+        archivo ya existe, será reemplazado.
     """
     try:
         with open(filename, 'w', encoding='utf-8') as archivo_json:
@@ -16,20 +19,23 @@ def serialize_and_save_to_file(data, filename):
     except Exception as e:
         print(f"Ocurrió un error al serializar y guardar los datos: {e}")
 
+
 def load_and_deserialize(filename):
     """
-    Carga y deserializa datos desde un archivo JSON para recrear el diccionario de Python original.
+    Carga y deserializa datos desde un archivo JSON para recrear el
+    diccionario de Python original.
 
     Parámetros:
         filename (str): El nombre del archivo JSON de entrada.
 
     Retorna:
-        dict: Un diccionario de Python con los datos deserializados del archivo.
+        dict: Un diccionario de Python con los datos
+        deserializados del archivo.
     """
     try:
         with open(filename, 'r', encoding='utf-8') as archivo_json:
             datos = json.load(archivo_json)
-        print(f"Los datos han sido cargados y deserializados desde '{filename}'.")
+        print(f"Datos cargados y deserializados desde '{filename}'.")
         return datos
     except FileNotFoundError:
         print(f"Error: El archivo '{filename}' no fue encontrado.")
