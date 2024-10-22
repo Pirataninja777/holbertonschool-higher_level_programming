@@ -5,7 +5,6 @@ import socketserver
 
 PORT = 8000
 
-
 class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
@@ -25,9 +24,17 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             }
             self.wfile.write(json.dumps(data).encode("utf-8"))
 
-        else:
-            self.send_error(404, "Endpoint not found")
+        elif self.path == "/status":
+            self.send_response(200)
+            self.send_header("Content-type", "text/plain")
+            self.end_headers()
+            self.wfile.write(b"OK")
 
+        else:
+            self.send_response(404)
+            self.send_header("Content-type", "text/plain")
+            self.end_headers()
+            self.wfile.write(b"Endpoint not found")
 
 if __name__ == "__main__":
     with socketserver.TCPServer(("", PORT), SimpleHTTPRequestHandler) as httpd:
