@@ -16,7 +16,8 @@ if __name__ == "__main__":
         port=3306,
         user=mysql_user,
         passwd=mysql_password,
-        db=mysql_db
+        db=mysql_db,
+        charset="utf8"
     )
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
