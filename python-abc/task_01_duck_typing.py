@@ -82,7 +82,7 @@ class Rectangle(Shape):
 
 def shape_info(shape):
     """
-    Funcion que imprime el area y el perimetrode
+    Funcion que imprime el area y el perimetro de
     cualquier forma.
     Se basa en el duck typing el area,
     asumiendo que el objeto tiene los metodos de area y perimetro
@@ -92,4 +92,4 @@ def shape_info(shape):
     area = shape.area()
     perimeter = shape.perimeter()
     print(f"Area: {area}")
-    print(f"Perimetro: {perimeter}")
+    print(f"Perimeter: {perimeter}")
