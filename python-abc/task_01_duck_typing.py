@@ -34,6 +34,8 @@ class Circle(Shape):
         Inicializa un circulo con un radio.
         :param radius: Radio del circulo (numero positivo).
         """
+        if radius < 0:
+            raise ValueError("El radio no puede ser negativo.")
         self.radius = radius
 
     def area(self):
@@ -73,7 +75,8 @@ class Rectangle(Shape):
 
     def perimeter(self):
         """
-        Calcula el perimetro del rectangulo usando la formula 2(ancho + altura).
+        Calcula el perimetro del rectangulo usando la
+        formula 2(ancho + altura).
         :return: Perimetro del rectangulo.
         """
         return 2 * (self.width + self.height)
@@ -81,10 +84,12 @@ class Rectangle(Shape):
 
 def shape_info(shape):
     """
-    Funcion que imprime el area y el perimetro de cualquier forma.
-    Se basa en el duck typing el area, asumiendo que el objeto tiene los metodos de area y perimetro.
-    :param shape: Objeto que debe tener implementados los metodos area y perimeter.
+    Funcion que imprime el area y el perimetrode
+    cualquier forma.
+    Se basa en el duck typing el area,
+    asumiendo que el objeto tiene los metodos de area y perimetro
+    :param shape: Objeto que debe tener implementados los metodos
+    area y perimeter
     """
     print(f"Area: {shape.area()}")
     print(f"Perimetro: {shape.perimeter()}")
-
