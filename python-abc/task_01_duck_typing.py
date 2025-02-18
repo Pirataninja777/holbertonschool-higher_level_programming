@@ -89,7 +89,7 @@ def shape_info(shape):
     :param shape: Objeto que debe tener implementados los metodos
     area y perimeter
     """
-    area = round(shape.area(), 2)
-    perimeter = round(shape.perimeter(), 2)
+    area = shape.area()
+    perimeter = shape.perimeter()
     print(f"Area: {area}")
     print(f"Perimetro: {perimeter}")
