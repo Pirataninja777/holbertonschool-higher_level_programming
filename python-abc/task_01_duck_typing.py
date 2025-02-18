@@ -34,8 +34,6 @@ class Circle(Shape):
         Inicializa un circulo con un radio.
         :param radius: Radio del circulo (numero positivo).
         """
-        if radius < 0:
-            raise ValueError("El radio no puede ser negativo.")
         self.radius = radius
 
     def area(self):
@@ -43,14 +41,14 @@ class Circle(Shape):
         Calcula el area del circulo usando la formula radio al cuadrado
         :retorna: Area del circulo.
         """
-        return math.pi * self.radius ** 2
+        return math.pi * abs(self.radius) ** 2
 
     def perimeter(self):
         """
         Calcula el perimetro (circunferencia) del circulo usando la formula.
         :return: Perimetro del circulo.
         """
-        return 2 * math.pi * self.radius
+        return 2 * math.pi * abs(self.radius)
 
 
 class Rectangle(Shape):
